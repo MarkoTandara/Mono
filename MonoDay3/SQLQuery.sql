@@ -12,7 +12,7 @@ CustomerID uniqueidentifier,
 OrderName varchar(50),
 PRIMARY KEY (OrderID),
 CONSTRAINT FK_CustomerOrder FOREIGN KEY (CustomerID)
-REFERENCES Customer(CustomerID)
+REFERENCES Customer(CustomerID) ON DELETE CASCADE
 )
 
 INSERT INTO Customer VALUES
